@@ -1,0 +1,27 @@
+<h1>Book list</h1>
+<div class="col-md-6 offset-3">
+
+  <div class="row">
+    <a id="createBtn" class="btn btn-primary" routerLink="/create">Create new Book</a>
+  </div>
+  <br>
+  <div class="row">
+    <table class="table-borderless">
+      <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      <tr *ngFor="let book of books; index as i">
+        <td>{{i + 1}}</td>
+        <td><a [routerLink]="['/detail/', book.id]">{{book.title}}</a></td>
+        <td>{{book.author}}</td>
+        <td><a class="btn btn-primary" [routerLink]="['/update/', book.id]">Update</a></td>
+        <td><a class="btn btn-danger" [routerLink]="['/delete/', book.id]">Delete</a></td>
+      </tr>
+    </table>
+  </div>
+
+</div>

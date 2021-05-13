@@ -1,0 +1,17 @@
+h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.btn-secondary {
+  width: 200px;
+  float: right;
+}
+.btn-primary {
+  width: 200px;
+}
+p {
+  color: forestgreen;
+  font-size: large;
+}

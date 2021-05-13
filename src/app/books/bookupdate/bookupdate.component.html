@@ -1,0 +1,22 @@
+<h1>Update Book</h1>
+
+<div class="col-md-6 offset-3">
+  <p *ngIf="message">{{message}}</p>
+  <form [formGroup]="bookForm" (ngSubmit)="updateBook()">
+    <input formControlName="id" name="id" type="number" hidden>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" placeholder="Title" formControlName="title" required="">
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" class="form-control" id="author" placeholder="Author" formControlName="author" required="">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="description" rows="3" formControlName="description" required=""></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!bookForm.valid">Update</button>
+    <button class="btn btn-secondary" type="button" [routerLink]="''">Back</button>
+  </form>
+</div>
